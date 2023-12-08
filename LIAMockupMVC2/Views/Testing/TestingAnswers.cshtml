@@ -1,0 +1,57 @@
+﻿@model IEnumerable<LIAMockupMVC2.Models.Answer>
+@{
+    ViewData["Title"] = "TestingAnswers";
+}
+@{
+    var answers = ViewData["Answers"] as List<Answer>;
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-5">Testing getting info</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AnswerId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AnswerText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AnswerNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FK_QuestionId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FK_UserGroupId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in answers)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.AnswerId)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnswerText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnswerNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FK_QuestionId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FK_UserGroupId)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

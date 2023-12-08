@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LIAMockupMVC2.Models.User>
+@{
+    ViewData["Title"] = "TestingUser";
+}
+@{
+    var users = ViewData["Users"] as List<User>;
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-5">Testing getting info</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in users)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

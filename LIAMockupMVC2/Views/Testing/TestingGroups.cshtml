@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LIAMockupMVC2.Models.Group>
+@{
+    ViewData["Title"] = "TestingGroups";
+}
+@{
+    var groups = ViewData["Groups"] as List<Group>;
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-5">Testing getting info</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.GroupId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GroupName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FK_OrgId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in groups)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.GroupId)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GroupName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FK_OrgId)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

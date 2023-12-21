@@ -1,6 +1,6 @@
 ﻿@{
     bool isAuthenticated = User.Identity.IsAuthenticated;
-    isAuthenticated = false; @*Toogle sidebar*@
+    isAuthenticated = true; @*Toogle sidebar*@
     bool isAdmin = true; @*Toogle menu*@
 }
 
@@ -22,12 +22,12 @@
             @if (isAdmin)
             {
                 <!-- Sidebar -->
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar-custom" style="width: 280px;">
+                <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-custom" style="width: 280px; background-color:#64473a">
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-graph-up text-white" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
                         </svg>
-                        <span class="fs-4 ms-3">QlokTrack</span>
+                        <span class="fs-4 ms-3 text-white">QlokTrack</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
@@ -79,7 +79,7 @@
                     </ul>
                     <hr>
                     <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle text-white" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
                             <strong>Admin</strong>
                         </a>
@@ -95,12 +95,12 @@
             else
             {
                 <!-- Sidebar -->
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar-custom" style="width: 280px;">
+                <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-custom" style="width: 280px; background-color:#64473a">
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-graph-up text-white" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
                         </svg>
-                        <span class="fs-4 ms-3">QlokTrack</span>
+                        <span class="fs-4 ms-3 text-white">QlokTrack</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
@@ -143,7 +143,7 @@
                     </ul>
                     <hr>
                     <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle text-white" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
                             <strong>Användare</strong>
                         </a>
@@ -211,7 +211,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-center">
+    <footer class="border-top footer text-center text-white">
         <div class="container-footer">
             &copy; @DateTime.Now.Year - QlokTrack - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

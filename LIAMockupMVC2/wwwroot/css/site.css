@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #64473a90 !important;
 }
 
 
@@ -27,9 +28,11 @@ body {
 /******** UPDATED CONTAINERS ********/
 /**********************************/
 .container-space-bottom {
+/*    background-color: #64473a;*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10%;
+    margin: auto;
 }
 
 /**********************************/
@@ -58,9 +61,9 @@ body {
 /**********************************/
 .btn-login {
     font-weight: bold;
-    background-color: #83b010;
+    background-color: #0f7b6c;
+    border: solid 2px #0f7b6c;
     padding: 5px 15px;
-    border: solid #668c06 2px;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
     border-radius: 50px;
     transition: 448ms;
@@ -80,14 +83,17 @@ body {
 }
 
 .btn-login a:hover {
-    color: #83b010 !important;
+    color: white !important;
 }
 
-.btn-login:hover 
-{
-    background-color: #afe625c6;
-    color: black;
-    border: solid 2px #afe625;
+.btn-login:hover {
+    background-color: #0b6e99;
+    border: solid 2px #0f7b6c;
+}
+
+.btn {
+/*    background-color: #6940a550 !important;*/
+    color: black !important;
 }
 
 
@@ -118,6 +124,14 @@ body {
     outline: 0;
 }
 
+.a dropdown-item {
+    color: #64473a !important;
+}
+
+.a dropdown-item:hover {
+    color: #0f7b6c !important;
+}
+
 .nav-flush .nav-link {
     border-radius: 0;
 }
@@ -132,11 +146,11 @@ body {
     border: 0;
 }
 
-.btn-toggle:hover,
-.btn-toggle:focus {
-    color: rgba(0, 0, 0, .85);
-    background-color: #d2f4ea;
-}
+    .btn-toggle:hover,
+    .btn-toggle:focus {
+        color: rgba(0, 0, 0, .85);
+        background-color: #0f7b6c;
+    }
 
 .btn-toggle::before {
     width: 1.25em;
@@ -162,10 +176,10 @@ body {
     text-decoration: none;
 }
 
-.btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
-    background-color: #d2f4ea;
-}
+    .btn-toggle-nav a:hover,
+    .btn-toggle-nav a:focus {
+        background-color: #0f7b6c;
+    }
 
 .scrollarea {
     overflow-y: auto;
@@ -228,7 +242,7 @@ body {
 }
 
 .container-footer {
-    background-color: #FFFFFF;
+    background-color:#64473a90;
     width: 100% !important;
 }
 
@@ -238,6 +252,16 @@ body {
 
 .icon-social svg:hover {
     color: #CA5466 !important;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    border-bottom: 2px dotted;
+    text-decoration-color: white;
 }
 
 
@@ -330,7 +354,7 @@ body {
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
-    --bs-body-color: #7b8ab8;
+    --bs-body-color: white;
     --bs-body-color-rgb: 123, 138, 184;
     --bs-body-bg: #d9e3f1;
     --bs-body-bg-rgb: 217, 227, 241;
@@ -344,8 +368,8 @@ body {
     --bs-tertiary-color-rgb: 123, 138, 184;
     --bs-tertiary-bg: #f0f5fa;
     --bs-tertiary-bg-rgb: 240, 245, 250;
-    --bs-heading-color: #485785;
-    --bs-link-color: #485785;
+    --bs-heading-color: white;
+    --bs-link-color: #64473a;
     --bs-link-color-rgb: 72, 87, 133;
     --bs-link-decoration: underline;
     --bs-link-hover-color: #3a466a;
@@ -605,12 +629,12 @@ sup {
 }
 
 a {
-    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
-    text-decoration: underline;
+    color: rgba(var(--bs-link-color), var(--bs-link-opacity, 1));
+    text-decoration: none;
 }
 
     a:hover {
-        --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+        --bs-link-color: var(--bs-link-hover-color-rgb);
     }
 
     a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -4084,8 +4108,8 @@ textarea.form-control-lg {
     --bs-dropdown-divider-bg: transparent;
     --bs-dropdown-divider-margin-y: 0.5rem;
     --bs-dropdown-box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.15), inset 1px 1px 3px rgba(255, 255, 255, 0.5), inset -5px -5px 20px rgba(0, 0, 0, 0.05);
-    --bs-dropdown-link-color: #7b8ab8;
-    --bs-dropdown-link-hover-color: #444b40;
+    --bs-dropdown-link-color: #64473a;
+    --bs-dropdown-link-hover-color: #0f7b6c;
     --bs-dropdown-link-hover-bg: transparent;
     --bs-dropdown-link-active-color: #fff;
     --bs-dropdown-link-active-bg: #378dfc;
@@ -4602,7 +4626,7 @@ textarea.form-control-lg {
 .nav-pills {
     --bs-nav-pills-border-radius: var(--bs-border-radius);
     --bs-nav-pills-link-active-color: #fff;
-    --bs-nav-pills-link-active-bg: #378dfc;
+    --bs-nav-pills-link-active-bg: #64473a90;
 }
 
     .nav-pills .nav-link {

@@ -1,9 +1,11 @@
-﻿@model IEnumerable<LIAMockupMVC2.Models.Answer>
+﻿@using LIAMockupMVC2.Models.ViewModel
+@model LIAMockupMVC2.Models.ViewModel.QsInfoViewModel
+
 @{
-    ViewData["Title"] = "TestingAnswers";
+    ViewData["Title"] = "TestingQuestionsJoin";
 }
 @{
-    var answers = ViewData["Answers"] as List<Answer>;
+    var allQuestionsWithAnswerInfo = ViewData["allQuestionsWithAnswerInfo"] as List<QsInfoViewModel>;
 }
 
 <div class="container-space-bottom mt-5 p-2 text-center">
@@ -13,30 +15,36 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.AnswerId)
+                    @Html.DisplayNameFor(model => model.QuestionText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuestionNum)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.AnswerText)
                 </th>
-                <th>
+                                <th>
                     @Html.DisplayNameFor(model => model.AnswerNum)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.FK_QuestionId)
+                    @Html.DisplayNameFor(model => model.GroupName)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.FK_UserGroupId)
+                    @Html.DisplayNameFor(model => model.OrgName)
                 </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in answers)
+            @foreach (var item in allQuestionsWithAnswerInfo)
             {
                 <tr>
                     <th>
-                        @Html.DisplayFor(modelItem => item.AnswerId)
+                        @Html.DisplayFor(modelItem => item.QuestionText)
                     </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuestionNum)
+                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.AnswerText)
                     </td>
@@ -44,10 +52,10 @@
                         @Html.DisplayFor(modelItem => item.AnswerNum)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FK_QuestionId)
+                        @Html.DisplayFor(modelItem => item.GroupName)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FK_UserGroupId)
+                        @Html.DisplayFor(modelItem => item.OrgName)
                     </td>
                 </tr>
             }
